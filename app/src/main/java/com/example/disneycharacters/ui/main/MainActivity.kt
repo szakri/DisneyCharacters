@@ -1,4 +1,4 @@
-package com.example.disneycharacters
+package com.example.disneycharacters.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
