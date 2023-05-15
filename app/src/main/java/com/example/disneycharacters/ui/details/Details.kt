@@ -1,4 +1,4 @@
 package com.example.disneycharacters.ui.details
 
-class DetailsActivity {
+class Details {
 }

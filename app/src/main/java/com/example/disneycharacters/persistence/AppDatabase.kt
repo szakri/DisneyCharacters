@@ -1,4 +1,9 @@
 package com.example.disneycharacters.persistence
 
-class AppDatabase {
+import androidx.room.Database
+import androidx.room.RoomDatabase
+
+@Database(entities = [CharacterEntity::class], version = 1)
+abstract class AppDatabase: RoomDatabase() {
+    abstract fun disneyDao(): DisneyDao
 }
