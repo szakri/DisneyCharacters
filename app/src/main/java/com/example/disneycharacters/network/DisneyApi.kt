@@ -10,20 +10,20 @@ import retrofit2.http.Query
 
 interface DisneyApi {
     @GET("/character")
-    suspend fun getCharacters(): NetworkResult
+    suspend fun getCharacters(@Query("page") page:Int, @Query("pageSize") pageSize:Int = 20): ListResult
 
-    @GET("character")
-    fun getCharacters(@Query("q") q:String): NetworkResult
+    @GET("/character")
+    suspend fun getCharacterByName(@Query("name") name:String, @Query("page") page:Int): ListResult
 
-    @GET("character/{id}")
-    fun getCharacter(@Path("id") id:Int): NetworkResult
+    @GET("/character/{id}")
+    suspend fun getCharacter(@Path("id") id:Int): CharacterResult
 
-    @POST("character")
-    fun addCharacter(@Body newCharacter: Character): Int
+    @POST("/character")
+    suspend fun addCharacter(@Body newCharacter: Character): Int
 
-    @PUT("character/{id}")
-    fun updateCharacter(@Path("id") id:Int, @Body character: Character)
+    @PUT("/character/{id}")
+    suspend fun updateCharacter(@Path("id") id:Int, @Body character: Character)
 
-    @DELETE("character/{id}")
-    fun deleteCharacter(@Path("id") id:Int)
+    @DELETE("/character/{id}")
+    suspend fun deleteCharacter(@Path("id") id:Int)
 }
