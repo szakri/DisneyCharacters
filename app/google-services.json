@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "123215769763",
+    "project_id": "disneycharacters-e4fcf",
+    "storage_bucket": "disneycharacters-e4fcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123215769763:android:7968c9a3a123ed20f68f16",
+        "android_client_info": {
+          "package_name": "com.example.disneycharacters"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwqT8nfqTMSpaOOGIV9n-CcgdMSAwtj10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

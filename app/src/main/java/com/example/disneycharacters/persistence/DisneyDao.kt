@@ -5,15 +5,19 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.disneycharacters.model.Character
 
 @Dao
 interface DisneyDao {
     @Query("SELECT * FROM characters")
-    fun getAllCharacters(): LiveData<List<CharacterEntity>>
+    suspend fun getAllCharacters(): List<Character>
+
+    @Query("SELECT COUNT(*) FROM characters WHERE _id = :id")
+    suspend fun characterExists(id: Int): Boolean
 
     @Insert
-    suspend fun insertCharacter(character: CharacterEntity) : Long
+    suspend fun insertCharacter(character: Character) : Long
 
     @Delete
-    suspend fun deleteCharacter(character: CharacterEntity)
+    suspend fun deleteCharacter(character: Character)
 }
